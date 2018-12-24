@@ -1,1 +1,16 @@
 
+CREATE TABLE `tb_user` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `age` int(10) DEFAULT NULL,
+  `sex` tinyint(1) DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `updated` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`user_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
